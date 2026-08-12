@@ -26,14 +26,11 @@
     <section class="section">
       <h2>Enhancement One: Software Design and Engineering</h2>
       <p>This section presents the enhanced CS 320 Contact Service and explains how the project was improved through layered design, validation, persistence, repository abstraction and tests.</p>
-      <div class="link-grid"><a href="artifacts/software-design/original/Contact.java">Original Contact.java</a><a href="artifacts/software-design/original/ContactService.java">Original ContactService.java</a><a href="artifacts/software-design/enhanced/README.md">Enhanced README</a><a href="artifacts/software-design/enhanced/src/main/java/com/shabangaith/contactservice/ContactService.java">Enhanced ContactService.java</a><a href="downloads/CS499_3-2_Enhanced_Contact_Service_Shaban_Ghaith.zip">Enhanced Artifact ZIP</a><a href="documents/CS499_3-2_Enhancement_One_Narrative_Shaban_Ghaith.docx">Narrative DOCX</a></div>
+      <div class="link-grid"><a href="artifacts/software-design/original/Contact.java">Original Contact.java</a><a href="artifacts/software-design/original/ContactService.java">Original ContactService.java</a><a href="artifacts/software-design/enhanced/src/main/java/com/shabangaith/contactservice/ContactService.java">Enhanced ContactService.java</a><a href="documents/CS499_3-2_Enhancement_One_Narrative_Shaban_Ghaith.docx">Narrative DOCX</a></div>
     </section>
     <section class="section">
-      <h2>Narrative Text</h2>
-      <div class="narrative"><p>Enhancement One Narrative: Software Design and Engineering</p>
-<p>CS 320 Contact Service | CS 499 Computer Science Capstone</p>
-<p>Shaban Ghaith | July 2026</p>
-<p>Artifact Description and Reason for Selection</p>
+      <h2>Enhancement Narrative</h2>
+      <div class="narrative"><p>Artifact Description and Reason for Selection</p>
 <p>The artifact I selected is my CS 320 Contact Service, which I originally created as Project One in Software Test, Automation and Quality Assurance before taking CS 499. The original Java artifact had a Contact model, an in-memory ContactService class, field validation and JUnit tests for adding, updating and deleting contacts. I selected it for the software design and engineering category because it is small enough to understand clearly, but it has realistic design concerns: user input must be validated, contact IDs must remain unique, service logic must be reliable and tests must prove that the main behavior works.</p>
 <p>It also gave me a good opportunity to show growth instead of only showing the original assignment. In the original version, the service class both managed business rules and held the data in a HashMap. That works for a short program run, but contacts disappear when the application closes and it makes the service harder to extend. My Module 2 code review identified that limitation and guided the enhancement plan that I completed here.</p>
 <p>Enhancement and Skills Demonstrated</p>
@@ -45,13 +42,12 @@
 <p>Reflection on the Enhancement Process</p>
 <p>The biggest lesson from this enhancement was that code can meet the basic requirements and still need a better design before it is ready to show professionally. At first, I thought persistence was only an extra feature. While working through the change, I learned that persistence affects validation, error handling, test setup and the dependency structure of the whole program. Introducing the repository interface first made the later file-storage work much easier because I could keep the service methods focused on contact rules. I also learned to let the tests challenge my assumptions. One test exposed that trimming a value before checking it could hide a trailing control character. I corrected the validator so control characters are rejected before trimming and reran the complete test suite.</p>
 <p>The main challenge was keeping the enhancement meaningful without turning a small contact service into a much larger application. I handled that by completing the improvements from my code-review plan first: cleaner responsibilities, durable storage, input checks and stronger tests. I did not add unrelated features that would make the code harder to explain. This process helped me see that software engineering is not only writing more code. It is making focused design decisions, proving the behavior with tests and being able to explain the reason for each decision to another developer or employer.</p>
-<p>References</p>
-<p>Southern New Hampshire University. (2026). CS 499 Milestone Two: Enhancement One: Software Design and Engineering [Course assignment guidelines].</p></div>
+</div>
     </section>
     
   </main>
   <footer class="footer">
-    <p>Prepared for CS 499 Final Project Submission.</p>
+    <p>Shaban Ghaith | Computer Science Capstone</p>
   </footer>
 </body>
 </html>

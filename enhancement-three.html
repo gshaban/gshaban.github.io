@@ -26,15 +26,11 @@
     <section class="section">
       <h2>Enhancement Three: Databases</h2>
       <p>This section presents the enhanced CS 340 Grazioso Salvare MongoDB dashboard database layer and explains the database, configuration, validation, indexing, aggregation, testing and security improvements.</p>
-      <div class="link-grid"><a href="artifacts/databases/original/animal_shelter.py">Original animal_shelter.py</a><a href="artifacts/databases/enhanced/animal_shelter.py">Enhanced animal_shelter.py</a><a href="artifacts/databases/enhanced/CRUD_Python_Module.py">Compatibility CRUD Module</a><a href="artifacts/databases/enhanced/tests/test_animal_shelter.py">Database Unit Tests</a><a href="artifacts/databases/enhanced/README.md">Enhanced README</a><a href="downloads/CS499_5-2_Database_Enhancement_Artifact_Shaban_Ghaith.zip">Enhanced Artifact ZIP</a><a href="documents/CS499_5-2_Enhancement_Three_Database_Narrative_Shaban_Ghaith.docx">Narrative DOCX</a></div>
+      <div class="link-grid"><a href="artifacts/databases/original/animal_shelter.py">Original animal_shelter.py</a><a href="artifacts/databases/enhanced/animal_shelter.py">Enhanced animal_shelter.py</a><a href="artifacts/databases/enhanced/tests/test_animal_shelter.py">Database Unit Tests</a><a href="documents/CS499_5-2_Enhancement_Three_Database_Narrative_Shaban_Ghaith.docx">Narrative DOCX</a></div>
     </section>
     <section class="section">
-      <h2>Narrative Text</h2>
-      <div class="narrative"><p>5-2 Milestone Four: Enhancement Three - Databases</p>
-<p>Shaban Ghaith</p>
-<p>CS 499 Computer Science Capstone</p>
-<p>August 2026</p>
-<p>Artifact Description</p>
+      <h2>Enhancement Narrative</h2>
+      <div class="narrative"><p>Artifact Description</p>
 <p>The artifact I selected for the database category is my CS 340 Grazioso Salvare MongoDB dashboard. It was originally created during CS 340 Client/Server Development as a dashboard for reviewing Austin Animal Center shelter data and filtering possible rescue dog candidates for Grazioso Salvare. The original artifact included a Jupyter/Dash dashboard, a MongoDB CRUD module, a CSV data file and supporting documentation. Its main purpose was to connect a client-facing dashboard to a MongoDB animal collection so users could filter records, view matching animals and support decision making from stored shelter data.</p>
 <p>Justification and Database Skills Showcased</p>
 <p>I selected this artifact because it is the strongest fit for demonstrating database skills in my ePortfolio. Unlike a project that only stores small local values, this dashboard depends on a real database workflow: connecting to MongoDB, querying a collection, filtering records by business rules and returning useful data to a visual interface. The enhancement improves the artifact by turning the database module into a more complete repository layer. I added environment-based connection configuration, URL-safe credential handling, connection validation, query and projection validation, safer update and delete methods, reusable rescue-profile query helpers, dashboard-focused indexes, an aggregation method for outcome summaries and unit tests that verify the repository behavior without needing the original Codio database server.</p>
@@ -44,13 +40,12 @@
 <p>Reflection on the Enhancement Process</p>
 <p>While enhancing this artifact, I learned that database code should not be treated as simple helper code hidden behind a dashboard. The database layer controls what data is retrieved, how safely updates are made, how errors are handled and how easily the application can adapt later. One challenge was keeping compatibility with the original CS 340 dashboard while still improving the structure. I handled this by keeping the original CRUD import path through a wrapper while moving the stronger implementation into the enhanced AnimalShelter repository. Another challenge was testing database behavior without depending on the original course MongoDB environment. I addressed that by writing unit tests with an injected fake collection, which lets the validation, update, delete, indexing, aggregation and profile-query behavior be checked consistently.</p>
 <p>Overall, this enhancement helped me think more like a software developer responsible for data quality and data safety. The original artifact showed that I could connect a dashboard to MongoDB. The enhanced artifact shows that I can improve a database component so it is more secure, maintainable, testable and aligned with the needs of the organization using it.</p>
-<p>AI Usage Acknowledgment</p>
-<p>I used ChatGPT to understand the assignment and get help with writing, code and debugging. I made the final decisions about the design, goals, learning and final work.</p></div>
+</div>
     </section>
     
   </main>
   <footer class="footer">
-    <p>Prepared for CS 499 Final Project Submission.</p>
+    <p>Shaban Ghaith | Computer Science Capstone</p>
   </footer>
 </body>
 </html>
