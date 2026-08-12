@@ -1,10 +1,10 @@
 # Shaban Ghaith CS 499 ePortfolio
 
-This folder is ready to publish with GitHub Pages. The first page is `index.html`.
+This repository hosts my CS 499 Computer Science Capstone ePortfolio through GitHub Pages.
 
-Suggested GitHub Pages repository name: `gshaban.github.io` or a project repository with Pages enabled.
+Live ePortfolio: https://gshaban.github.io/
 
-Main sections:
+## Portfolio Sections
 
 - Professional self-assessment
 - Code review
@@ -14,4 +14,8 @@ Main sections:
 - Course outcome alignment
 - Final submission contents
 
-AI usage is acknowledged in the self-assessment and submission page.
+## About This Portfolio
+
+The ePortfolio presents my original and enhanced artifacts from the Computer Science program. The artifacts demonstrate growth in software design and engineering, algorithms and data structures, and databases. The site also includes my code review, milestone narratives, professional self-assessment, and course outcome alignment.
+
+AI usage is acknowledged in the self-assessment and submission materials.
