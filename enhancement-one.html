@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Enhancement One: Software Design and Engineering</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div>
+      <p class="eyebrow">CS 499 Computer Science Capstone</p>
+      <h1>Shaban Ghaith ePortfolio</h1>
+      <p class="tagline">Software design, algorithms, databases, communication, and security-minded development.</p>
+    </div>
+  </header>
+  <nav class="nav"><a class="" href="index.html">Self-Assessment</a>
+<a class="" href="code-review.html">Code Review</a>
+<a class="active" href="enhancement-one.html">Software Design</a>
+<a class="" href="enhancement-two.html">Algorithms</a>
+<a class="" href="enhancement-three.html">Databases</a>
+<a class="" href="outcomes.html">Outcomes</a>
+<a class="" href="submission.html">Submission</a></nav>
+  <main class="content">
+    
+    <section class="section">
+      <h2>Enhancement One: Software Design and Engineering</h2>
+      <p>This section presents the enhanced CS 320 Contact Service and explains how the project was improved through layered design, validation, persistence, repository abstraction, and tests.</p>
+      <div class="link-grid"><a href="artifacts/software-design/original/Contact.java">Original Contact.java</a><a href="artifacts/software-design/original/ContactService.java">Original ContactService.java</a><a href="artifacts/software-design/enhanced/README.md">Enhanced README</a><a href="artifacts/software-design/enhanced/src/main/java/com/shabangaith/contactservice/ContactService.java">Enhanced ContactService.java</a><a href="downloads/CS499_3-2_Enhanced_Contact_Service_Shaban_Ghaith.zip">Enhanced Artifact ZIP</a><a href="documents/CS499_3-2_Enhancement_One_Narrative_Shaban_Ghaith.docx">Narrative DOCX</a></div>
+    </section>
+    <section class="section">
+      <h2>Narrative Text</h2>
+      <div class="narrative"><p>Enhancement One Narrative: Software Design and Engineering</p>
+<p>CS 320 Contact Service | CS 499 Computer Science Capstone</p>
+<p>Shaban Ghaith | July 2026</p>
+<p>Artifact Description and Reason for Selection</p>
+<p>The artifact I selected is my CS 320 Contact Service, which I originally created as Project One in Software Test, Automation, and Quality Assurance before taking CS 499. The original Java artifact had a Contact model, an in-memory ContactService class, field validation, and JUnit tests for adding, updating, and deleting contacts. I selected it for the software design and engineering category because it is small enough to understand clearly, but it has realistic design concerns: user input must be validated, contact IDs must remain unique, service logic must be reliable, and tests must prove that the main behavior works.</p>
+<p>It also gave me a good opportunity to show growth instead of only showing the original assignment. In the original version, the service class both managed business rules and held the data in a HashMap. That works for a short program run, but contacts disappear when the application closes, and it makes the service harder to extend. My Module 2 code review identified that limitation and guided the enhancement plan that I completed here.</p>
+<p>Enhancement and Skills Demonstrated</p>
+<p>For the enhanced version, I separated responsibilities into a Contact model, a ContactValidator utility, a ContactRepository interface, an InMemoryContactRepository for fast tests, a FileContactRepository for persistence, and a ContactService that owns the business rules. The repository interface is the main design improvement because the service no longer depends on one storage choice. It can be tested with in-memory storage now and could later use a database implementation without changing the service API. The file repository stores contacts locally and writes through a temporary file before replacing the saved file, which reduces the risk of leaving a partially written data file if a write fails.</p>
+<p>I also strengthened the validation boundary. The enhanced code rejects blank values, control characters, invalid contact IDs, non-numeric phone numbers, and duplicate IDs before unsafe or invalid data reaches storage. The contact ID is immutable, which protects the record key during updates. I expanded the JUnit tests to cover valid updates, duplicate IDs, missing records, invalid boundary input, persistence after reloading the repository, deletion after reload, and a corrupted storage record. I ran mvn test after the changes, and all six test methods passed. These changes show object-oriented design, separation of concerns, validation, persistence, defensive programming, and automated testing in one working artifact.</p>
+<p>Course Outcomes and Updated Coverage Plan</p>
+<p>This enhancement makes substantial progress toward the outcome about using well-founded techniques, skills, and tools to implement computing solutions that accomplish industry goals. The layered design and Maven/JUnit test suite make the Contact Service easier to maintain and more dependable. It also supports the outcome about designing and evaluating computing solutions using computer science practices because I made a deliberate trade-off: local file persistence keeps the project simple and inspectable for this milestone, while the repository interface keeps a future database migration possible. The enhancement also supports the security-mindset outcome by treating malformed input, duplicate identifiers, corrupted saved data, and interrupted file writes as problems to anticipate instead of ignoring them.</p>
+<p>My coverage plan has not changed. This artifact is my main software design and engineering evidence. I will use the eBid Binary Search Tree enhancement later to emphasize algorithmic reasoning and performance trade-offs, and I will use the Grazioso Salvare dashboard later to emphasize database design, CRUD operations, reporting, and secure configuration. Together, the three artifacts will let my final ePortfolio show a broader range of computer science skills rather than trying to force every outcome into one project.</p>
+<p>Reflection on the Enhancement Process</p>
+<p>The biggest lesson from this enhancement was that code can meet the basic requirements and still need a better design before it is ready to show professionally. At first, I thought persistence was only an extra feature. While working through the change, I learned that persistence affects validation, error handling, test setup, and the dependency structure of the whole program. Introducing the repository interface first made the later file-storage work much easier because I could keep the service methods focused on contact rules. I also learned to let the tests challenge my assumptions. One test exposed that trimming a value before checking it could hide a trailing control character. I corrected the validator so control characters are rejected before trimming and reran the complete test suite.</p>
+<p>The main challenge was keeping the enhancement meaningful without turning a small contact service into a much larger application. I handled that by completing the improvements from my code-review plan first: cleaner responsibilities, durable storage, input checks, and stronger tests. I did not add unrelated features that would make the code harder to explain. This process helped me see that software engineering is not only writing more code. It is making focused design decisions, proving the behavior with tests, and being able to explain the reason for each decision to another developer or employer.</p>
+<p>References</p>
+<p>Southern New Hampshire University. (2026). CS 499 Milestone Two: Enhancement One: Software Design and Engineering [Course assignment guidelines].</p></div>
+    </section>
+    
+  </main>
+  <footer class="footer">
+    <p>Prepared for CS 499 Final Project Submission. AI use is acknowledged in the portfolio materials.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,23 @@
+CS499 Milestone Three Verification Output
+Student: Shaban Ghaith
+Artifact: Enhanced CS300 eBid Binary Search Tree
+
+Build command used:
+g++ -std=c++17 -Wall -Wextra -pedantic BinarySearchTree.cpp CSVparser.cpp -o ebid_bst.exe
+
+Self-test command:
+./ebid_bst.exe --self-test
+
+Self-test output:
+Self-test passed.
+
+Menu/data verification performed:
+./ebid_bst.exe eBid_Monthly_Sales_Dec_2016.csv 98223
+
+Observed results:
+- 76 bids loaded from eBid_Monthly_Sales_Dec_2016.csv.
+- Search for bid 98223 returned: 98223: Chair | 71.88 | General Fund.
+- After removing bid 98223, searching again returned: Bid Id 98223 not found.
+- Tree size changed from 76 bids to 75 bids.
+
+These checks verify insertion, CSV loading, search, removal, size tracking, and the built-in self-test path.
