@@ -16,6 +16,5 @@ Live ePortfolio: https://gshaban.github.io/
 
 ## About This Portfolio
 
-The ePortfolio presents my original and enhanced artifacts from the Computer Science program. The artifacts demonstrate growth in software design and engineering, algorithms and data structures, and databases. The site also includes my code review, milestone narratives, professional self-assessment, and course outcome alignment.
+The ePortfolio presents my original and enhanced artifacts from the Computer Science program. The artifacts demonstrate growth in software design and engineering, algorithms and data structures and databases. The site also includes my code review, milestone narratives, professional self-assessment and course outcome alignment.
 
-AI usage is acknowledged in the self-assessment and submission materials.

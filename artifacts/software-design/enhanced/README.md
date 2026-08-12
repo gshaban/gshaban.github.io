@@ -10,8 +10,8 @@ This project enhances my original CS 320 Contact Service artifact. The original 
 - Moved reusable input rules into `ContactValidator`.
 - Added a `ContactRepository` interface so service logic does not depend on one storage implementation.
 - Added `FileContactRepository` with durable, atomic local-file persistence.
-- Kept validation at the domain boundary and added checks for control characters, empty values, invalid IDs, and invalid phone numbers.
-- Expanded JUnit coverage for duplicate IDs, missing records, invalid values, persistence after reload, and a corrupted storage record.
+- Kept validation at the domain boundary and added checks for control characters, empty values, invalid IDs and invalid phone numbers.
+- Expanded JUnit coverage for duplicate IDs, missing records, invalid values, persistence after reload and a corrupted storage record.
 
 ## Run the tests
 

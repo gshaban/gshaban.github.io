@@ -20,4 +20,4 @@ Observed results:
 - After removing bid 98223, searching again returned: Bid Id 98223 not found.
 - Tree size changed from 76 bids to 75 bids.
 
-These checks verify insertion, CSV loading, search, removal, size tracking, and the built-in self-test path.
+These checks verify insertion, CSV loading, search, removal, size tracking and the built-in self-test path.
